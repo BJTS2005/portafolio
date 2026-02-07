@@ -1,0 +1,600 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import homelabImg from "../../assets/images/homelab.png";
+---
+
+<Layout title="Homelab Infrastructure | Jesus">
+    <!-- Efectos de fondo -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div
+            class="absolute -top-40 -right-40 w-96 h-96 bg-accent-violet/20 rounded-full blur-[128px] animate-pulse-glow"
+        >
+        </div>
+        <div
+            class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent-cyan/10 rounded-full blur-[128px] animate-pulse-glow"
+            style="animation-delay: 1s;"
+        >
+        </div>
+    </div>
+
+    <!-- Navbar simple -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md bg-primary/80 border-b border-white/5"
+    >
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="/" class="text-xl font-semibold tracking-tight group">
+                <span class="text-accent-cyan">&lt;</span>
+                <span
+                    class="text-text-primary group-hover:text-accent-purple transition-colors"
+                    >Jesus</span
+                >
+                <span class="text-accent-cyan">/&gt;</span>
+            </a>
+            <a
+                href="/#projects"
+                class="text-text-secondary hover:text-accent-cyan transition-colors text-sm flex items-center gap-2"
+            >
+                <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Volver a proyectos
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header del proyecto -->
+            <header class="mb-16">
+                <div class="flex items-center gap-4 mb-6">
+                    <span
+                        class="px-3 py-1 bg-accent-cyan/10 text-accent-cyan text-xs rounded-full border border-accent-cyan/20"
+                    >
+                        24/7 Online
+                    </span>
+                    <span
+                        class="px-3 py-1 bg-accent-violet/10 text-accent-violet text-xs rounded-full border border-accent-violet/20"
+                    >
+                        Self-hosted
+                    </span>
+                </div>
+
+                <h1
+                    class="text-4xl md:text-5xl font-bold text-text-primary mb-4"
+                >
+                    Homelab <span class="text-accent-violet"
+                        >Infrastructure</span
+                    >
+                </h1>
+
+                <p
+                    class="text-text-secondary text-lg leading-relaxed max-w-2xl"
+                >
+                    Infraestructura personal que me permite experimentar con
+                    tecnologías, hostear mis propios servicios y aprender sobre
+                    administración de servidores en un entorno real de
+                    producción.
+                </p>
+            </header>
+
+            <!-- Imagen hero del proyecto -->
+            <div
+                class="relative mb-16 rounded-2xl overflow-hidden border border-white/10"
+            >
+                <div
+                    class="aspect-video bg-surface flex items-center justify-center"
+                >
+                    <img
+                        src={homelabImg.src}
+                        alt="Homelab Infrastructure - Terminal con htop o neofetch"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <!-- Glow effect -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"
+                >
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Overview
+                </h2>
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        Este proyecto nació de la curiosidad por entender cómo
+                        funcionan los servidores "detrás de escenas". Tomé una
+                        laptop antigua y la convertí en un servidor funcional
+                        que corre 24/7, sirviendo aplicaciones reales accesibles
+                        desde internet.
+                    </p>
+                    <p class="text-text-secondary leading-relaxed">
+                        Lo que empezó como un experimento se convirtió en mi
+                        laboratorio personal para aprender <span
+                            class="text-accent-cyan">Docker</span
+                        >,
+                        <span class="text-accent-violet"
+                            >Linux administration</span
+                        >,
+                        <span class="text-accent-cyan">networking</span> y
+                        <span class="text-accent-violet">CI/CD</span> en un entorno
+                        real, no simulado.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Tech Stack
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- Sistema Operativo -->
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-cyan/30 transition-all group"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center"
+                            >
+                                <Icon
+                                    name="simple-icons:ubuntu"
+                                    class="w-6 h-6 text-accent-cyan"
+                                />
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-text-primary font-medium group-hover:text-accent-cyan transition-colors"
+                                >
+                                    Ubuntu Server
+                                </h3>
+                                <p class="text-text-muted text-sm">
+                                    Sistema operativo base
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Docker -->
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-violet/30 transition-all group"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-violet/10 rounded-lg flex items-center justify-center"
+                            >
+                                <Icon
+                                    name="simple-icons:docker"
+                                    class="w-6 h-6 text-accent-violet"
+                                />
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-text-primary font-medium group-hover:text-accent-violet transition-colors"
+                                >
+                                    Docker
+                                </h3>
+                                <p class="text-text-muted text-sm">
+                                    Containerización de servicios
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloudflare Tunnel -->
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-cyan/30 transition-all group"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center"
+                            >
+                                <Icon
+                                    name="simple-icons:cloudflare"
+                                    class="w-6 h-6 text-accent-cyan"
+                                />
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-text-primary font-medium group-hover:text-accent-cyan transition-colors"
+                                >
+                                    Cloudflare Tunnel
+                                </h3>
+                                <p class="text-text-muted text-sm">
+                                    Exposición segura sin abrir puertos
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tailscale -->
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-violet/30 transition-all group"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-violet/10 rounded-lg flex items-center justify-center"
+                            >
+                                <Icon
+                                    name="simple-icons:tailscale"
+                                    class="w-6 h-6 text-accent-violet"
+                                />
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-text-primary font-medium group-hover:text-accent-violet transition-colors"
+                                >
+                                    Tailscale
+                                </h3>
+                                <p class="text-text-muted text-sm">
+                                    VPN mesh para acceso remoto seguro
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Servicios Hosteados -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Servicios Hosteados
+                </h2>
+
+                <div class="space-y-4">
+                    <!-- Servicio 1 -->
+                    <div
+                        class="p-6 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-text-primary">
+                                Aplicación de Validación con IA
+                            </h3>
+                            <span
+                                class="px-2 py-1 bg-green-500/10 text-green-400 text-xs rounded-full"
+                                >Activo</span
+                            >
+                        </div>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Aplicación web que utiliza visión por computadora
+                            (CLIP y PyTorch) para validar fotos tamaño pasaporte
+                            de forma automática.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >Python</span
+                            >
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >PyTorch</span
+                            >
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >CLIP</span
+                            >
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >Gunicorn</span
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div
+                        class="p-6 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-text-primary">
+                                Plataforma de Automatización
+                            </h3>
+                            <span
+                                class="px-2 py-1 bg-green-500/10 text-green-400 text-xs rounded-full"
+                                >Activo</span
+                            >
+                        </div>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Instancia self-hosted de n8n para crear workflows
+                            automatizados, integraciones con APIs externas y
+                            automatización de tareas repetitivas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >n8n</span
+                            >
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >Node.js</span
+                            >
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >Webhooks</span
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div
+                        class="p-6 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-start justify-between mb-3">
+                            <h3 class="text-lg font-semibold text-text-primary">
+                                Aplicación Full-Stack
+                            </h3>
+                            <span
+                                class="px-2 py-1 bg-green-500/10 text-green-400 text-xs rounded-full"
+                                >Activo</span
+                            >
+                        </div>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Stack completo con frontend en React/Nginx, backend
+                            en Node.js, y base de datos PostgreSQL. Todo
+                            containerizado y orquestado con Docker.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >React</span
+                            >
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >Node.js</span
+                            >
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >PostgreSQL</span
+                            >
+                            <span
+                                class="px-2 py-1 bg-primary text-text-muted text-xs rounded"
+                                >Nginx</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Arquitectura -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Arquitectura
+                </h2>
+
+                <!-- Diagrama simplificado con código -->
+                <div
+                    class="bg-surface/50 border border-white/10 rounded-xl p-6 font-mono text-sm overflow-x-auto"
+                >
+                    <div class="text-text-muted mb-4">// Flujo de conexión</div>
+                    <pre
+                        class="text-text-secondary">
+<span class="text-accent-cyan">Internet</span>
+    │
+    ▼
+<span class="text-accent-violet">Cloudflare Tunnel</span> <span class="text-text-muted">(HTTPS)</span>
+    │
+    ├──► <span class="text-accent-cyan">api.*</span>     ──► <span class="text-text-primary">Python/Gunicorn</span> <span class="text-text-muted">(IA Service)</span>
+    │
+    ├──► <span class="text-accent-cyan">app.*</span>     ──► <span class="text-text-primary">Nginx + Node.js</span> <span class="text-text-muted">(Full-Stack App)</span>
+    │
+    └──► <span class="text-accent-cyan">n8n.*</span>     ──► <span class="text-text-primary">n8n</span> <span class="text-text-muted">(Automatización)</span>
+</pre>
+                </div>
+            </section>
+
+            <!-- Seguridad -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Medidas de Seguridad
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-green-400">✓</span>
+                            <h3 class="text-text-primary font-medium">
+                                Zero Trust Network
+                            </h3>
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            Cloudflare Tunnel elimina la necesidad de abrir
+                            puertos al exterior.
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-green-400">✓</span>
+                            <h3 class="text-text-primary font-medium">
+                                Usuarios No-Root
+                            </h3>
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            Contenedores ejecutan con usuarios sin privilegios
+                            elevados.
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-green-400">✓</span>
+                            <h3 class="text-text-primary font-medium">
+                                Límites de Recursos
+                            </h3>
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            CPU y memoria limitados por contenedor para evitar
+                            DoS.
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-green-400">✓</span>
+                            <h3 class="text-text-primary font-medium">
+                                SSH con Llaves ED25519
+                            </h3>
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            Autenticación por llaves criptográficas, sin
+                            passwords.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aprendizajes -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Lo que Aprendí
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-cyan/10 rounded-lg flex items-center justify-center text-accent-cyan font-bold shrink-0"
+                        >
+                            1
+                        </div>
+                        <div>
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Linux Administration
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Gestión de usuarios, permisos, servicios
+                                systemd, y troubleshooting en terminal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-violet/10 rounded-lg flex items-center justify-center text-accent-violet font-bold shrink-0"
+                        >
+                            2
+                        </div>
+                        <div>
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Docker & Containerización
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Crear Dockerfiles optimizados, gestionar
+                                volúmenes, redes, y orquestar múltiples
+                                servicios.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-cyan/10 rounded-lg flex items-center justify-center text-accent-cyan font-bold shrink-0"
+                        >
+                            3
+                        </div>
+                        <div>
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Networking & Security
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Túneles seguros, reverse proxy, DNS, y mejores
+                                prácticas de seguridad en servidores.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-violet/10 rounded-lg flex items-center justify-center text-accent-violet font-bold shrink-0"
+                        >
+                            4
+                        </div>
+                        <div>
+                            <h3 class="text-text-primary font-medium mb-1">
+                                DevOps Mindset
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Pensar en infraestructura como código,
+                                automatización, y deployment de aplicaciones
+                                reales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Final -->
+            <section class="text-center pt-8 border-t border-white/10">
+                <p class="text-text-secondary mb-6">
+                    ¿Interesado en saber más sobre este proyecto?
+                </p>
+                <a
+                    href="/#contact"
+                    class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-cyan to-accent-violet rounded-lg font-medium text-primary hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] transition-all"
+                >
+                    Hablemos
+                    <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer simple -->
+    <footer class="py-8 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-text-muted text-sm">
+                © 2025 Jesus. Hecho con
+                <span class="text-accent-purple">♥</span> y
+                <span class="text-accent-cyan">código</span>
+            </p>
+        </div>
+    </footer>
+</Layout>
