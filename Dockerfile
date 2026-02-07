@@ -46,18 +46,14 @@ RUN mkdir -p /var/cache/nginx/client_temp \
              /var/cache/nginx/fastcgi_temp \
              /var/cache/nginx/uwsgi_temp \
              /var/cache/nginx/scgi_temp \
-             /var/log/nginx \
-             /var/run && \
+             /var/log/nginx && \
     chown -R nginx-app:nginx-app /var/cache/nginx \
-                                  /var/log/nginx \
-                                  /var/run && \
-    chmod -R 755 /var/cache/nginx && \
-    touch /var/run/nginx.pid && \
-    chown nginx-app:nginx-app /var/run/nginx.pid
+                                  /var/log/nginx && \
+    chmod -R 755 /var/cache/nginx
 
 # Copiar archivos
 COPY --from=builder --chown=nginx-app:nginx-app /app/dist /usr/share/nginx/html
-COPY --chown=nginx-app:nginx-app nginx.conf /etc/nginx/conf.d/default.conf
+COPY --chown=nginx-app:nginx-app nginx.conf /etc/nginx/nginx.conf
 
 USER nginx-app
 
