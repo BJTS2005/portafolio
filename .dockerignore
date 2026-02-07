@@ -1,0 +1,38 @@
+# Git
+.git
+.gitignore
+.github
+
+# Dependencias
+node_modules
+npm-debug.log*
+
+# Build output (se genera en el contenedor)
+dist
+.astro
+
+# Environment variables (CRÍTICO - nunca incluir)
+.env*
+
+# IDE
+.vscode
+.idea
+.DS_Store
+
+# Documentación (no necesaria en producción)
+README.md
+*.md
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Testing
+coverage
+logs
+*.log
+
+# Temporales
+tmp
+temp
