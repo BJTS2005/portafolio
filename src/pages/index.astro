@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import fotoPerfil from "../assets/images/foto_perfil.jpg";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout>
@@ -580,42 +581,186 @@ import fotoPerfil from "../assets/images/foto_perfil.jpg";
 			</div>
 
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-				<!-- Skill cards -->
-				{
-					[
-						{ name: "C# / .NET", icon: "⚡", color: "purple" },
-						{ name: "SQL Server", icon: "🗄️", color: "cyan" },
-						{ name: "Linux/Bash", icon: "🐧", color: "purple" },
-						{ name: "Docker", icon: "🐳", color: "cyan" },
-						{ name: "React", icon: "⚛️", color: "cyan" },
-						{ name: "Node.js", icon: "💚", color: "purple" },
-						{ name: "PostgreSQL", icon: "🐘", color: "cyan" },
-						{ name: "MongoDB", icon: "🍃", color: "purple" },
-						{ name: "Git", icon: "📚", color: "cyan" },
-						{
-							name: "Ethical Hacking",
-							icon: "🔐",
-							color: "purple",
-						},
-						{
-							name: "Clean Architecture",
-							icon: "🏗️",
-							color: "cyan",
-						},
-						{ name: "AWS Basics", icon: "☁️", color: "purple" },
-					].map((skill) => (
-						<div
-							class={`group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-${skill.color}/30 hover:bg-surface/50 transition-all cursor-default`}
+				<!-- C# / .NET -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-purple/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:dotnet"
+							class="w-6 h-6 text-accent-purple"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-purple transition-colors"
+							>C# / .NET</span
 						>
-							<div class="flex items-center gap-3">
-								<span class="text-2xl">{skill.icon}</span>
-								<span class="text-text-primary text-sm font-medium group-hover:text-accent-${skill.color} transition-colors">
-									{skill.name}
-								</span>
-							</div>
-						</div>
-					))
-				}
+					</div>
+				</div>
+				<!-- SQL Server -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-cyan/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:microsoftsqlserver"
+							class="w-6 h-6 text-accent-cyan"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-cyan transition-colors"
+							>SQL Server</span
+						>
+					</div>
+				</div>
+				<!-- Linux/Bash -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-purple/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:linux"
+							class="w-6 h-6 text-accent-purple"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-purple transition-colors"
+							>Linux/Bash</span
+						>
+					</div>
+				</div>
+				<!-- Docker -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-cyan/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:docker"
+							class="w-6 h-6 text-accent-cyan"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-cyan transition-colors"
+							>Docker</span
+						>
+					</div>
+				</div>
+				<!-- React -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-cyan/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:react"
+							class="w-6 h-6 text-accent-cyan"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-cyan transition-colors"
+							>React</span
+						>
+					</div>
+				</div>
+				<!-- Node.js -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-purple/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:nodedotjs"
+							class="w-6 h-6 text-accent-purple"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-purple transition-colors"
+							>Node.js</span
+						>
+					</div>
+				</div>
+				<!-- PostgreSQL -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-cyan/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:postgresql"
+							class="w-6 h-6 text-accent-cyan"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-cyan transition-colors"
+							>PostgreSQL</span
+						>
+					</div>
+				</div>
+				<!-- MongoDB -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-purple/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:mongodb"
+							class="w-6 h-6 text-accent-purple"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-purple transition-colors"
+							>MongoDB</span
+						>
+					</div>
+				</div>
+				<!-- Git -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-cyan/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:git"
+							class="w-6 h-6 text-accent-cyan"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-cyan transition-colors"
+							>Git</span
+						>
+					</div>
+				</div>
+				<!-- Ethical Hacking -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-purple/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="tabler:shield-lock"
+							class="w-6 h-6 text-accent-purple"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-purple transition-colors"
+							>Ethical Hacking</span
+						>
+					</div>
+				</div>
+				<!-- Clean Architecture -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-cyan/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="tabler:building-arch"
+							class="w-6 h-6 text-accent-cyan"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-cyan transition-colors"
+							>Clean Architecture</span
+						>
+					</div>
+				</div>
+				<!-- AWS Basics -->
+				<div
+					class="group p-4 bg-surface/30 border border-white/5 rounded-xl hover:border-accent-purple/30 hover:bg-surface/50 transition-all cursor-default"
+				>
+					<div class="flex items-center gap-3">
+						<Icon
+							name="simple-icons:amazonwebservices"
+							class="w-6 h-6 text-accent-purple"
+						/>
+						<span
+							class="text-text-primary text-sm font-medium group-hover:text-accent-purple transition-colors"
+							>AWS Basics</span
+						>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -647,7 +792,10 @@ import fotoPerfil from "../assets/images/foto_perfil.jpg";
 					<div
 						class="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center mb-4"
 					>
-						<span class="text-2xl">🎓</span>
+						<Icon
+							name="tabler:school"
+							class="w-6 h-6 text-accent-cyan"
+						/>
 					</div>
 					<h3
 						class="text-lg font-semibold text-text-primary mb-2 group-hover:text-accent-cyan transition-colors"
@@ -672,7 +820,10 @@ import fotoPerfil from "../assets/images/foto_perfil.jpg";
 					<div
 						class="w-12 h-12 bg-accent-purple/10 rounded-lg flex items-center justify-center mb-4"
 					>
-						<span class="text-2xl">🛡️</span>
+						<Icon
+							name="tabler:shield-lock"
+							class="w-6 h-6 text-accent-purple"
+						/>
 					</div>
 					<h3
 						class="text-lg font-semibold text-text-primary mb-2 group-hover:text-accent-purple transition-colors"
@@ -697,7 +848,10 @@ import fotoPerfil from "../assets/images/foto_perfil.jpg";
 					<div
 						class="w-12 h-12 bg-accent-purple/10 rounded-lg flex items-center justify-center mb-4"
 					>
-						<span class="text-2xl">🕷️</span>
+						<Icon
+							name="tabler:bug"
+							class="w-6 h-6 text-accent-purple"
+						/>
 					</div>
 					<h3
 						class="text-lg font-semibold text-text-primary mb-2 group-hover:text-accent-purple transition-colors"
@@ -722,7 +876,10 @@ import fotoPerfil from "../assets/images/foto_perfil.jpg";
 					<div
 						class="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center mb-4"
 					>
-						<span class="text-2xl">☁️</span>
+						<Icon
+							name="simple-icons:amazonwebservices"
+							class="w-6 h-6 text-accent-cyan"
+						/>
 					</div>
 					<h3
 						class="text-lg font-semibold text-text-primary mb-2 group-hover:text-accent-cyan transition-colors"

@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="404 - Página en construcción">
@@ -36,7 +37,10 @@ import Layout from "../layouts/Layout.astro";
             <div
                 class="w-20 h-20 mx-auto mb-6 bg-surface/50 border border-white/10 rounded-2xl flex items-center justify-center"
             >
-                <span class="text-4xl">🚧</span>
+                <Icon
+                    name="tabler:barrier-block"
+                    class="w-10 h-10 text-accent-purple"
+                />
             </div>
 
             <!-- Message -->
