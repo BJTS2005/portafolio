@@ -1,13 +1,16 @@
 # ============================================
 # STAGE 1: Build
 # ============================================
-FROM node:18-alpine AS builder
+FROM node:22-alpine AS builder
 
 # Crear usuario no privilegiado
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S nodejs -u 1001
 
 WORKDIR /app
+
+# Asegurar permisos correctos
+RUN chown nodejs:nodejs /app
 
 # Copiar solo package files
 COPY --chown=nodejs:nodejs package*.json ./
