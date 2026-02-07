@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+    /* Colores - Hacker Chill + Purple Glow */
+    --color-primary: #0a0a0f;
+    --color-secondary: #13111a;
+    --color-surface: #1a1625;
+    --color-surface-hover: #231e30;
+
+    --color-text-primary: #e7e9ea;
+    --color-text-secondary: #9ca3b4;
+    --color-text-muted: #6b7280;
+
+    --color-accent-cyan: #00d9ff;
+    --color-accent-purple: #a855f7;
+    --color-accent-violet: #7c3aed;
+    --color-glow-magenta: #581c87;
+
+    /* Fonts */
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Animations */
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+    --animate-gradient: gradient 8s ease infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-surface);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-violet);
+}
+
+/* Selection */
+::selection {
+    background: rgba(168, 85, 247, 0.3);
+    color: var(--color-text-primary);
+}
