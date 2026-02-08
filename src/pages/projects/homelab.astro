@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import homelabImg from "../../assets/images/homelab.png";
 ---
@@ -94,10 +95,12 @@ import homelabImg from "../../assets/images/homelab.png";
                 <div
                     class="aspect-video bg-surface flex items-center justify-center"
                 >
-                    <img
-                        src={homelabImg.src}
+                    <Image
+                        src={homelabImg}
                         alt="Homelab Infrastructure - Terminal con htop o neofetch"
                         class="w-full h-full object-cover"
+                        loading="eager"
+                        quality={75}
                     />
                 </div>
                 <!-- Glow effect -->
