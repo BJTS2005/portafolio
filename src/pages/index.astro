@@ -874,31 +874,55 @@ import { Icon } from "astro-icon/components";
 					</p>
 				</div>
 
-				<!-- PortSwigger -->
+				<!-- PortSwigger Web Security Academy -->
 				<div
-					class="p-6 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-purple/30 transition-all group relative"
+					class="p-6 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-purple/30 transition-all group relative cursor-pointer"
+					onclick="document.getElementById('modal-portswigger').classList.remove('hidden')"
 				>
 					<span
-						class="absolute top-4 right-4 px-3 py-1 bg-accent-violet/10 text-accent-violet text-xs rounded-full border border-accent-violet/20"
+						class="absolute top-4 right-4 px-3 py-1 bg-orange-500/10 text-orange-400 text-xs rounded-full border border-orange-500/20"
 					>
-						Curso
+						En progreso
 					</span>
 					<div
 						class="w-12 h-12 bg-accent-purple/10 rounded-lg flex items-center justify-center mb-4"
 					>
 						<Icon
-							name="tabler:bug"
+							name="tabler:lock-open"
 							class="w-6 h-6 text-accent-purple"
 						/>
 					</div>
 					<h3
 						class="text-lg font-semibold text-text-primary mb-2 group-hover:text-accent-purple transition-colors"
 					>
-						Server-Side Vulnerabilities
+						PortSwigger Web Security Academy
 					</h3>
 					<p class="text-text-secondary text-sm">
-						PortSwigger Web Security Academy - Vulnerabilidades del
-						lado del servidor.
+						Aprendiendo seguridad web ofensiva con labs prácticos de
+						vulnerabilidades reales.
+					</p>
+					<p
+						class="text-text-muted text-xs mt-2 flex items-center gap-1"
+					>
+						<svg
+							class="w-3 h-3"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+							></path>
+						</svg>
+						Click para ver progreso
 					</p>
 				</div>
 
@@ -1169,6 +1193,177 @@ import { Icon } from "astro-icon/components";
 				>
 					Certificado
 				</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal PortSwigger -->
+	<div
+		id="modal-portswigger"
+		class="hidden fixed inset-0 z-50 flex items-center justify-center p-4"
+		onclick="if(event.target === this) this.classList.add('hidden')"
+	>
+		<!-- Overlay oscuro -->
+		<div class="absolute inset-0 bg-primary/90 backdrop-blur-sm"></div>
+
+		<!-- Contenido del modal -->
+		<div
+			class="relative max-w-2xl w-full max-h-[85vh] overflow-y-auto bg-surface border border-white/10 rounded-2xl"
+		>
+			<!-- Header del modal -->
+			<div
+				class="sticky top-0 bg-surface/95 backdrop-blur-sm border-b border-white/10 p-6 flex items-center justify-between"
+			>
+				<div>
+					<h2 class="text-xl font-bold text-text-primary">
+						PortSwigger Web Security Academy
+					</h2>
+					<p class="text-text-muted text-sm">
+						Mi progreso en seguridad web ofensiva
+					</p>
+				</div>
+				<button
+					onclick="document.getElementById('modal-portswigger').classList.add('hidden')"
+					class="text-text-muted hover:text-text-primary transition-colors cursor-pointer"
+				>
+					<svg
+						class="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+
+			<!-- Contenido -->
+			<div class="p-6 space-y-6">
+				<!-- Módulo 1: Server-Side (Completado) -->
+				<div class="p-5 bg-primary/50 border border-white/5 rounded-xl">
+					<div class="flex items-center justify-between mb-3">
+						<h3
+							class="text-lg font-semibold text-text-primary flex items-center gap-2"
+						>
+							<Icon
+								name="tabler:server"
+								class="w-5 h-5 text-accent-cyan"
+							/>
+							Server-Side Vulnerabilities
+						</h3>
+						<span
+							class="px-2 py-1 bg-accent-cyan/10 text-accent-cyan text-xs rounded-full"
+							>Completado</span
+						>
+					</div>
+					<p class="text-text-secondary text-sm mb-4">
+						Vulnerabilidades del lado del servidor: path traversal,
+						access control, authentication, SSRF, file uploads,
+						command injection y SQL injection básico.
+					</p>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="bg-surface/50 rounded-lg p-3 text-center">
+							<div class="text-2xl font-bold text-accent-cyan">
+								7/7
+							</div>
+							<div class="text-text-muted text-xs">Temas</div>
+						</div>
+						<div class="bg-surface/50 rounded-lg p-3 text-center">
+							<div class="text-2xl font-bold text-accent-purple">
+								15/15
+							</div>
+							<div class="text-text-muted text-xs">Labs</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Módulo 2: SQL Injection (En progreso) -->
+				<div class="p-5 bg-primary/50 border border-white/5 rounded-xl">
+					<div class="flex items-center justify-between mb-3">
+						<h3
+							class="text-lg font-semibold text-text-primary flex items-center gap-2"
+						>
+							<Icon
+								name="tabler:database"
+								class="w-5 h-5 text-accent-violet"
+							/>
+							SQL Injection
+						</h3>
+						<span
+							class="px-2 py-1 bg-accent-violet/10 text-accent-violet text-xs rounded-full"
+							>En progreso</span
+						>
+					</div>
+					<p class="text-text-secondary text-sm mb-4">
+						Ataques de inyección SQL: UNION attacks, blind SQLi,
+						error-based, time delays, out-of-band y técnicas de
+						prevención.
+					</p>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="bg-surface/50 rounded-lg p-3 text-center">
+							<div class="text-2xl font-bold text-accent-cyan">
+								10/18
+							</div>
+							<div class="text-text-muted text-xs">Temas</div>
+						</div>
+						<div class="bg-surface/50 rounded-lg p-3 text-center">
+							<div class="text-2xl font-bold text-accent-purple">
+								9/15
+							</div>
+							<div class="text-text-muted text-xs">Labs</div>
+						</div>
+					</div>
+					<!-- Barra de progreso estilo terminal -->
+					<div
+						class="mt-4 bg-surface/80 rounded-lg px-3 py-2 font-mono text-xs"
+					>
+						<div class="flex items-center gap-2">
+							<span class="text-text-muted">Progress</span>
+							<span class="text-accent-cyan"
+								>█████████████████████░░░░░░░░░░░░░░░░░░░░░░</span
+							>
+							<span class="text-accent-purple">49%</span>
+							<span class="text-text-muted">25/51</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Placeholder para futuros módulos -->
+				<div
+					class="p-5 border border-dashed border-white/10 rounded-xl text-center"
+				>
+					<p class="text-text-muted text-sm">
+						Más módulos próximamente...
+					</p>
+				</div>
+			</div>
+
+			<!-- Footer del modal -->
+			<div class="border-t border-white/10 p-4 text-center">
+				<a
+					href="https://portswigger.net/web-security/learning-paths"
+					target="_blank"
+					class="text-accent-cyan text-sm hover:underline flex items-center justify-center gap-1"
+				>
+					Ver en PortSwigger
+					<svg
+						class="w-4 h-4"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+						></path>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</div>
