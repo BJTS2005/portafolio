@@ -1,0 +1,703 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Sistema de Conciliación Bancaria | Jesus">
+    <!-- Efectos de fondo -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div
+            class="absolute -top-40 -right-40 w-96 h-96 bg-accent-purple/20 rounded-full blur-[128px] animate-pulse-glow"
+        >
+        </div>
+        <div
+            class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent-cyan/10 rounded-full blur-[128px] animate-pulse-glow"
+            style="animation-delay: 1s;"
+        >
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-md bg-primary/80 border-b border-white/5"
+    >
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="/" class="text-xl font-semibold tracking-tight group">
+                <span class="text-accent-cyan">&lt;</span>
+                <span
+                    class="text-text-primary group-hover:text-accent-purple transition-colors"
+                    >Jesus</span
+                >
+                <span class="text-accent-cyan">/&gt;</span>
+            </a>
+            <a
+                href="/#projects"
+                class="text-text-secondary hover:text-accent-cyan transition-colors text-sm flex items-center gap-2"
+            >
+                <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Volver a proyectos
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header del proyecto -->
+            <header class="mb-16">
+                <div class="flex items-center gap-4 mb-6">
+                    <span
+                        class="px-3 py-1 bg-green-500/10 text-green-400 text-xs rounded-full border border-green-500/20"
+                    >
+                        En Producción
+                    </span>
+                    <span
+                        class="px-3 py-1 bg-accent-purple/10 text-accent-purple text-xs rounded-full border border-accent-purple/20"
+                    >
+                        Mutualista Imbabura
+                    </span>
+                </div>
+
+                <h1
+                    class="text-4xl md:text-5xl font-bold text-text-primary mb-4"
+                >
+                    Automatización <span class="text-accent-purple"
+                        >Pago Directo</span
+                    >
+                </h1>
+
+                <p
+                    class="text-text-secondary text-lg leading-relaxed max-w-2xl"
+                >
+                    Automatización del proceso de conciliación bancaria que
+                    transformó un proceso manual de 75 minutos en una operación
+                    de menos de 15 segundos.
+                </p>
+            </header>
+
+            <!-- Métrica principal destacada -->
+            <div
+                class="relative mb-16 p-8 bg-gradient-to-br from-accent-purple/10 to-accent-cyan/5 border border-white/10 rounded-2xl overflow-hidden"
+            >
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-accent-purple/10 rounded-full blur-3xl"
+                >
+                </div>
+                <div
+                    class="relative flex flex-col md:flex-row items-center justify-center gap-8 text-center"
+                >
+                    <div>
+                        <div
+                            class="text-5xl md:text-6xl font-bold text-text-muted opacity-50"
+                        >
+                            75 min
+                        </div>
+                        <div class="text-text-muted text-sm mt-1">
+                            Proceso manual
+                        </div>
+                    </div>
+                    <div class="text-4xl text-accent-cyan">→</div>
+                    <div>
+                        <div
+                            class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-accent-cyan to-accent-purple bg-clip-text text-transparent"
+                        >
+                            &lt;15 seg
+                        </div>
+                        <div class="text-text-muted text-sm mt-1">
+                            Proceso automatizado
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <span
+                        class="px-4 py-2 bg-green-500/10 text-green-400 text-sm rounded-full border border-green-500/20"
+                    >
+                        99.7% de reducción de tiempo
+                    </span>
+                </div>
+            </div>
+
+            <!-- Imagen del proyecto -->
+            <!-- NOTA: Pon aquí un screenshot de la app o un diagrama -->
+            <div
+                class="relative mb-16 rounded-2xl overflow-hidden border border-white/10"
+            >
+                <div
+                    class="aspect-video bg-surface flex items-center justify-center"
+                >
+                    <div class="text-center p-8">
+                        <div
+                            class="w-20 h-20 mx-auto mb-4 bg-accent-purple/10 rounded-2xl flex items-center justify-center"
+                        >
+                            <Icon
+                                name="tabler:chart-bar"
+                                class="w-10 h-10 text-accent-purple"
+                            />
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            Screenshot de la aplicación Windows Forms
+                        </p>
+                        <p class="text-text-muted text-xs mt-2">
+                            o diagrama del flujo de procesamiento
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- El Problema -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    El Problema
+                </h2>
+                <div
+                    class="p-6 bg-red-500/5 border border-red-500/20 rounded-xl"
+                >
+                    <p class="text-text-secondary leading-relaxed">
+                        El proceso de conciliación de Pago Directo en Mutualista
+                        Imbabura se realizaba de forma
+                        <span class="text-red-400">completamente manual</span>.
+                        Un operador debía abrir múltiples archivos de diferentes
+                        fuentes, copiar datos entre hojas, aplicar fórmulas,
+                        identificar discrepancias visualmente, y generar
+                        reportes. Este proceso tomaba aproximadamente <span
+                            class="text-red-400">75 minutos por ciclo</span
+                        >
+                        y era propenso a errores humanos.
+                    </p>
+                </div>
+            </section>
+
+            <!-- La Solución -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    La Solución
+                </h2>
+                <div
+                    class="p-6 bg-green-500/5 border border-green-500/20 rounded-xl"
+                >
+                    <p class="text-text-secondary leading-relaxed">
+                        Desarrollé un sistema de escritorio que <span
+                            class="text-green-400"
+                            >automatiza completamente</span
+                        >
+                        el proceso de conciliación de Pago Directo. El usuario solo
+                        selecciona los archivos fuente y el sistema procesa automáticamente
+                        toda la información, aplica validaciones, identifica discrepancias,
+                        y genera el reporte de cuadre en <span
+                            class="text-green-400">menos de 15 segundos</span
+                        >. El sistema fue validado contra cuadres históricos
+                        para verificar su correcto funcionamiento.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Tech Stack
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-purple/30 transition-all group"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-purple/10 rounded-lg flex items-center justify-center"
+                            >
+                                <Icon
+                                    name="simple-icons:dotnet"
+                                    class="w-6 h-6 text-accent-purple"
+                                />
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-text-primary font-medium group-hover:text-accent-purple transition-colors"
+                                >
+                                    .NET 8.0
+                                </h3>
+                                <p class="text-text-muted text-sm">
+                                    Framework principal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-cyan/30 transition-all group"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center"
+                            >
+                                <Icon
+                                    name="tabler:device-desktop"
+                                    class="w-6 h-6 text-accent-cyan"
+                                />
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-text-primary font-medium group-hover:text-accent-cyan transition-colors"
+                                >
+                                    Windows Forms
+                                </h3>
+                                <p class="text-text-muted text-sm">
+                                    Interfaz de usuario
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-purple/30 transition-all group"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-purple/10 rounded-lg flex items-center justify-center"
+                            >
+                                <Icon
+                                    name="tabler:file-spreadsheet"
+                                    class="w-6 h-6 text-accent-purple"
+                                />
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-text-primary font-medium group-hover:text-accent-purple transition-colors"
+                                >
+                                    ClosedXML
+                                </h3>
+                                <p class="text-text-muted text-sm">
+                                    Generación de reportes Excel
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl hover:border-accent-cyan/30 transition-all group"
+                    >
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center"
+                            >
+                                <Icon
+                                    name="tabler:building-arch"
+                                    class="w-6 h-6 text-accent-cyan"
+                                />
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-text-primary font-medium group-hover:text-accent-cyan transition-colors"
+                                >
+                                    Clean Architecture
+                                </h3>
+                                <p class="text-text-muted text-sm">
+                                    Arquitectura por capas
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Arquitectura -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Arquitectura
+                </h2>
+
+                <div
+                    class="bg-surface/50 border border-white/10 rounded-xl p-6 font-mono text-sm overflow-x-auto"
+                >
+                    <div class="text-text-muted mb-4">
+                        // Estructura del sistema
+                    </div>
+                    <pre
+                        class="text-text-secondary">
+<span class="text-accent-purple">PagoDirecto-Mutualista</span>
+    │
+    ├── <span class="text-accent-cyan">Domain</span> <span class="text-text-muted">(Entidades)</span>
+    │   ├── OrdenanteReceptor
+    │   └── ResultadoSplit
+    │
+    ├── <span class="text-accent-cyan">Application</span> <span class="text-text-muted">(Abstracciones)</span>
+    │   ├── IDatReader
+    │   ├── IExcelReportWriter
+    │   ├── IRptSummaryReader
+    │   └── IReporteOrionSplitter
+    │
+    ├── <span class="text-accent-cyan">Infrastructure</span> <span class="text-text-muted">(Implementaciones)</span>
+    │   ├── DatParser
+    │   ├── ExcelReportWriter
+    │   ├── RptSummaryReader
+    │   └── ClosedXmlPostProcessor
+    │
+    └── <span class="text-accent-cyan">Presentation</span> <span class="text-text-muted">(UI)</span>
+        └── Windows Forms
+					</pre>
+                </div>
+            </section>
+
+            <!-- Flujo del proceso -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Flujo del Proceso
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-cyan/10 rounded-lg flex items-center justify-center text-accent-cyan font-bold shrink-0"
+                        >
+                            1
+                        </div>
+                        <div
+                            class="flex-1 p-4 bg-surface/50 border border-white/5 rounded-xl"
+                        >
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Carga de Archivos
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                El usuario selecciona los archivos fuente: Excel
+                                de BanRed, reportes TXT del sistema interno, y
+                                archivos RPT de transacciones.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-purple/10 rounded-lg flex items-center justify-center text-accent-purple font-bold shrink-0"
+                        >
+                            2
+                        </div>
+                        <div
+                            class="flex-1 p-4 bg-surface/50 border border-white/5 rounded-xl"
+                        >
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Parsing y Normalización
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                El sistema lee cada archivo con su parser
+                                especializado, normaliza formatos de fecha,
+                                montos y referencias para poder compararlos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-cyan/10 rounded-lg flex items-center justify-center text-accent-cyan font-bold shrink-0"
+                        >
+                            3
+                        </div>
+                        <div
+                            class="flex-1 p-4 bg-surface/50 border border-white/5 rounded-xl"
+                        >
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Validación y Cruce
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Algoritmos de validación cruzan información
+                                entre las diferentes fuentes, identificando
+                                coincidencias y discrepancias automáticamente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-purple/10 rounded-lg flex items-center justify-center text-accent-purple font-bold shrink-0"
+                        >
+                            4
+                        </div>
+                        <div
+                            class="flex-1 p-4 bg-surface/50 border border-white/5 rounded-xl"
+                        >
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Generación de Reporte
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Se genera el reporte Excel con el cuadre de Pago
+                                Directo, incluyendo resumen, consultas
+                                procesadas, y formato condicional para
+                                identificación visual de diferencias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Características -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Características Clave
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <Icon
+                                name="tabler:check"
+                                class="w-5 h-5 text-green-400"
+                            />
+                            <h3 class="text-text-primary font-medium">
+                                Multi-formato
+                            </h3>
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            Procesa múltiples tipos de archivos de entrada de
+                            forma unificada.
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <Icon
+                                name="tabler:check"
+                                class="w-5 h-5 text-green-400"
+                            />
+                            <h3 class="text-text-primary font-medium">
+                                Alto Volumen
+                            </h3>
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            Capacidad de procesar archivos con miles de
+                            registros sin degradación de rendimiento.
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <Icon
+                                name="tabler:check"
+                                class="w-5 h-5 text-green-400"
+                            />
+                            <h3 class="text-text-primary font-medium">
+                                Reportes Visuales
+                            </h3>
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            Formato condicional con códigos de colores para
+                            identificación rápida de diferencias.
+                        </p>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl"
+                    >
+                        <div class="flex items-center gap-3 mb-2">
+                            <Icon
+                                name="tabler:check"
+                                class="w-5 h-5 text-green-400"
+                            />
+                            <h3 class="text-text-primary font-medium">
+                                Validado
+                            </h3>
+                        </div>
+                        <p class="text-text-muted text-sm">
+                            Sistema probado contra cuadres históricos para
+                            garantizar resultados correctos.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resultados -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Resultados
+                </h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl text-center"
+                    >
+                        <div class="text-3xl font-bold text-accent-cyan mb-1">
+                            99.7%
+                        </div>
+                        <div class="text-text-muted text-xs">
+                            Reducción de tiempo
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl text-center"
+                    >
+                        <div class="text-3xl font-bold text-accent-purple mb-1">
+                            0
+                        </div>
+                        <div class="text-text-muted text-xs">
+                            Errores humanos
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-5 bg-surface/50 border border-white/5 rounded-xl text-center"
+                    >
+                        <div class="text-3xl font-bold text-accent-cyan mb-1">
+                            100%
+                        </div>
+                        <div class="text-text-muted text-xs">Automatizado</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aprendizajes -->
+            <section class="mb-16">
+                <h2
+                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
+                >
+                    <span class="text-accent-cyan font-mono text-lg">//</span>
+                    Lo que Aprendí
+                </h2>
+
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-cyan/10 rounded-lg flex items-center justify-center text-accent-cyan font-bold shrink-0"
+                        >
+                            1
+                        </div>
+                        <div>
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Procesamiento de Archivos
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Manejo eficiente de múltiples formatos de
+                                archivo y optimización para grandes volúmenes de
+                                datos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-purple/10 rounded-lg flex items-center justify-center text-accent-purple font-bold shrink-0"
+                        >
+                            2
+                        </div>
+                        <div>
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Arquitectura Limpia
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Separación de responsabilidades en capas para
+                                facilitar mantenimiento y futuras extensiones.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-cyan/10 rounded-lg flex items-center justify-center text-accent-cyan font-bold shrink-0"
+                        >
+                            3
+                        </div>
+                        <div>
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Dominio Financiero
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Comprensión profunda de procesos de conciliación
+                                bancaria y requisitos de auditoría.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div
+                            class="w-10 h-10 bg-accent-purple/10 rounded-lg flex items-center justify-center text-accent-purple font-bold shrink-0"
+                        >
+                            4
+                        </div>
+                        <div>
+                            <h3 class="text-text-primary font-medium mb-1">
+                                Impacto Real
+                            </h3>
+                            <p class="text-text-secondary text-sm">
+                                Cómo la automatización puede transformar
+                                procesos operativos y liberar recursos para
+                                tareas de mayor valor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Final -->
+            <section class="text-center pt-8 border-t border-white/10">
+                <p class="text-text-secondary mb-6">
+                    ¿Tienes procesos manuales que podrían beneficiarse de
+                    automatización?
+                </p>
+                <a
+                    href="/#contact"
+                    class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent-cyan to-accent-purple rounded-lg font-medium text-primary hover:scale-105 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] transition-all"
+                >
+                    Hablemos
+                    <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-text-muted text-sm">
+                © 2025 Jesus. Hecho con
+                <span class="text-accent-purple">♥</span> y
+                <span class="text-accent-cyan">código</span>
+            </p>
+        </div>
+    </footer>
+</Layout>
