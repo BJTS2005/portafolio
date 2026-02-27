@@ -1,9 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import Footer from "../../components/Footer.astro";
+import pagoDirectoFlow from "../../assets/images/pago-directo-flow.png";
 ---
 
-<Layout title="Sistema de Conciliación Bancaria | Jesus">
+<Layout title="Automatización Cuadre Pago Directo | Jesus">
     <!-- Efectos de fondo -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
         <div
@@ -72,55 +75,59 @@ import { Icon } from "astro-icon/components";
                     class="text-4xl md:text-5xl font-bold text-text-primary mb-4"
                 >
                     Automatización <span class="text-accent-purple"
-                        >Pago Directo</span
+                        >Cuadre Pago Directo</span
                     >
                 </h1>
 
                 <p
                     class="text-text-secondary text-lg leading-relaxed max-w-2xl"
                 >
-                    Automatización del proceso de conciliación bancaria que
-                    transformó un proceso manual de 75 minutos en una operación
-                    de menos de 15 segundos.
+                    Automatización de la conciliación bancaria que transformó
+                    una operación manual de 75 minutos en menos de 15 segundos.
                 </p>
             </header>
 
             <!-- Métrica principal destacada -->
             <div
-                class="relative mb-16 p-8 bg-gradient-to-br from-accent-purple/10 to-accent-cyan/5 border border-white/10 rounded-2xl overflow-hidden"
+                class="relative mb-16 py-6 px-4 md:px-6 bg-gradient-to-br from-accent-purple/10 to-accent-cyan/5 border border-white/10 rounded-2xl overflow-hidden"
             >
                 <div
-                    class="absolute top-0 right-0 w-64 h-64 bg-accent-purple/10 rounded-full blur-3xl"
+                    class="absolute top-0 right-0 w-40 h-40 bg-accent-purple/10 rounded-full blur-3xl"
                 >
                 </div>
                 <div
-                    class="relative flex flex-col md:flex-row items-center justify-center gap-8 text-center"
+                    class="relative grid grid-cols-[1fr_auto_1fr] items-center gap-4 md:gap-6 text-center"
                 >
                     <div>
                         <div
-                            class="text-5xl md:text-6xl font-bold text-text-muted opacity-50"
+                            class="text-3xl md:text-5xl font-bold text-text-muted opacity-50 line-through decoration-red-500/40"
                         >
                             75 min
                         </div>
-                        <div class="text-text-muted text-sm mt-1">
+                        <div class="text-text-muted text-xs md:text-sm mt-1">
                             Proceso manual
                         </div>
                     </div>
-                    <div class="text-4xl text-accent-cyan">→</div>
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-px h-16 bg-gradient-to-b from-white/5 via-white/20 to-white/5"
+                        >
+                        </div>
+                    </div>
                     <div>
                         <div
-                            class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-accent-cyan to-accent-purple bg-clip-text text-transparent"
+                            class="text-3xl md:text-5xl font-bold text-accent-purple"
                         >
                             &lt;15 seg
                         </div>
-                        <div class="text-text-muted text-sm mt-1">
+                        <div class="text-text-muted text-xs md:text-sm mt-1">
                             Proceso automatizado
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-6">
+                <div class="text-center mt-4">
                     <span
-                        class="px-4 py-2 bg-green-500/10 text-green-400 text-sm rounded-full border border-green-500/20"
+                        class="px-3 py-1.5 bg-green-500/10 text-green-400 text-xs md:text-sm rounded-full border border-green-500/20"
                     >
                         99.7% de reducción de tiempo
                     </span>
@@ -128,28 +135,30 @@ import { Icon } from "astro-icon/components";
             </div>
 
             <!-- Imagen del proyecto -->
-            <!-- NOTA: Pon aquí un screenshot de la app o un diagrama -->
             <div
-                class="relative mb-16 rounded-2xl overflow-hidden border border-white/10"
+                class="relative mb-16 rounded-2xl overflow-hidden border border-white/10 cursor-pointer group"
+                onclick="document.getElementById('modal-pago-directo').classList.remove('hidden')"
             >
+                <Image
+                    src={pagoDirectoFlow}
+                    alt="Diagrama del flujo de Pago Directo"
+                    class="w-full h-auto group-hover:scale-[1.02] transition-transform duration-300"
+                    loading="eager"
+                    quality={75}
+                />
                 <div
-                    class="aspect-video bg-surface flex items-center justify-center"
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
                 >
-                    <div class="text-center p-8">
-                        <div
-                            class="w-20 h-20 mx-auto mb-4 bg-accent-purple/10 rounded-2xl flex items-center justify-center"
+                    <div
+                        class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg flex items-center gap-2"
+                    >
+                        <Icon
+                            name="tabler:zoom-in"
+                            class="w-5 h-5 text-white"
+                        />
+                        <span class="text-white text-sm font-medium"
+                            >Abrir diagrama</span
                         >
-                            <Icon
-                                name="tabler:chart-bar"
-                                class="w-10 h-10 text-accent-purple"
-                            />
-                        </div>
-                        <p class="text-text-muted text-sm">
-                            Screenshot de la aplicación Windows Forms
-                        </p>
-                        <p class="text-text-muted text-xs mt-2">
-                            o diagrama del flujo de procesamiento
-                        </p>
                     </div>
                 </div>
             </div>
@@ -162,9 +171,7 @@ import { Icon } from "astro-icon/components";
                     <span class="text-accent-cyan font-mono text-lg">//</span>
                     El Problema
                 </h2>
-                <div
-                    class="p-6 bg-red-500/5 border border-red-500/20 rounded-xl"
-                >
+                <div class="p-6 bg-surface/50 border border-white/5 rounded-xl">
                     <p class="text-text-secondary leading-relaxed">
                         El proceso de conciliación de Pago Directo en Mutualista
                         Imbabura se realizaba de forma
@@ -174,8 +181,10 @@ import { Icon } from "astro-icon/components";
                         identificar discrepancias visualmente, y generar
                         reportes. Este proceso tomaba aproximadamente <span
                             class="text-red-400">75 minutos por ciclo</span
-                        >
-                        y era propenso a errores humanos.
+                        >, era propenso a errores humanos y <span
+                            class="text-red-400"
+                            >requería personal capacitado</span
+                        > específicamente en el proceso de cuadre de Pago Directo.
                     </p>
                 </div>
             </section>
@@ -188,9 +197,7 @@ import { Icon } from "astro-icon/components";
                     <span class="text-accent-cyan font-mono text-lg">//</span>
                     La Solución
                 </h2>
-                <div
-                    class="p-6 bg-green-500/5 border border-green-500/20 rounded-xl"
-                >
+                <div class="p-6 bg-surface/50 border border-white/5 rounded-xl">
                     <p class="text-text-secondary leading-relaxed">
                         Desarrollé un sistema de escritorio que <span
                             class="text-green-400"
@@ -199,10 +206,11 @@ import { Icon } from "astro-icon/components";
                         el proceso de conciliación de Pago Directo. El usuario solo
                         selecciona los archivos fuente y el sistema procesa automáticamente
                         toda la información, aplica validaciones, identifica discrepancias,
-                        y genera el reporte de cuadre en <span
-                            class="text-green-400">menos de 15 segundos</span
-                        >. El sistema fue validado contra cuadres históricos
-                        para verificar su correcto funcionamiento.
+                        y genera el reporte de cuadre. El sistema fue validado contra
+                        cuadres históricos y <span class="text-green-400"
+                            >simplificó la operación al punto de que cualquier
+                            colaborador puede ejecutarlo</span
+                        > sin necesidad de conocimiento especializado en el proceso.
                     </p>
                 </div>
             </section>
@@ -332,31 +340,24 @@ import { Icon } from "astro-icon/components";
                     class="bg-surface/50 border border-white/10 rounded-xl p-6 font-mono text-sm overflow-x-auto"
                 >
                     <div class="text-text-muted mb-4">
-                        // Estructura del sistema
+                        // Clean Architecture
                     </div>
                     <pre
                         class="text-text-secondary">
-<span class="text-accent-purple">PagoDirecto-Mutualista</span>
+<span class="text-accent-purple">PagoDirecto-Mutualista_Imbabura</span>
     │
-    ├── <span class="text-accent-cyan">Domain</span> <span class="text-text-muted">(Entidades)</span>
-    │   ├── OrdenanteReceptor
-    │   └── ResultadoSplit
+    ├── <span class="text-accent-cyan">Domain</span>
+    │   <span class="text-text-muted">└── Entidades y reglas de negocio</span>
     │
-    ├── <span class="text-accent-cyan">Application</span> <span class="text-text-muted">(Abstracciones)</span>
-    │   ├── IDatReader
-    │   ├── IExcelReportWriter
-    │   ├── IRptSummaryReader
-    │   └── IReporteOrionSplitter
+    ├── <span class="text-accent-cyan">Application</span>
+    │   <span class="text-text-muted">└── Casos de uso y abstracciones</span>
     │
-    ├── <span class="text-accent-cyan">Infrastructure</span> <span class="text-text-muted">(Implementaciones)</span>
-    │   ├── DatParser
-    │   ├── ExcelReportWriter
-    │   ├── RptSummaryReader
-    │   └── ClosedXmlPostProcessor
+    ├── <span class="text-accent-cyan">Infrastructure</span>
+    │   <span class="text-text-muted">└── Implementaciones y acceso a datos</span>
     │
-    └── <span class="text-accent-cyan">Presentation</span> <span class="text-text-muted">(UI)</span>
-        └── Windows Forms
-					</pre>
+    └── <span class="text-accent-cyan">Presentation</span>
+        <span class="text-text-muted">└── Interfaz de usuario</span>
+        </pre>
                 </div>
             </section>
 
@@ -383,9 +384,8 @@ import { Icon } from "astro-icon/components";
                                 Carga de Archivos
                             </h3>
                             <p class="text-text-secondary text-sm">
-                                El usuario selecciona los archivos fuente: Excel
-                                de BanRed, reportes TXT del sistema interno, y
-                                archivos RPT de transacciones.
+                                El usuario selecciona los archivos fuente
+                                necesarios para el proceso de conciliación.
                             </p>
                         </div>
                     </div>
@@ -403,9 +403,8 @@ import { Icon } from "astro-icon/components";
                                 Parsing y Normalización
                             </h3>
                             <p class="text-text-secondary text-sm">
-                                El sistema lee cada archivo con su parser
-                                especializado, normaliza formatos de fecha,
-                                montos y referencias para poder compararlos.
+                                El sistema lee y normaliza la información de
+                                cada archivo para poder compararlos entre sí.
                             </p>
                         </div>
                     </div>
@@ -423,9 +422,9 @@ import { Icon } from "astro-icon/components";
                                 Validación y Cruce
                             </h3>
                             <p class="text-text-secondary text-sm">
-                                Algoritmos de validación cruzan información
-                                entre las diferentes fuentes, identificando
-                                coincidencias y discrepancias automáticamente.
+                                Se cruza la información entre las diferentes
+                                fuentes, identificando coincidencias y
+                                discrepancias automáticamente.
                             </p>
                         </div>
                     </div>
@@ -443,9 +442,8 @@ import { Icon } from "astro-icon/components";
                                 Generación de Reporte
                             </h3>
                             <p class="text-text-secondary text-sm">
-                                Se genera el reporte Excel con el cuadre de Pago
-                                Directo, incluyendo resumen, consultas
-                                procesadas, y formato condicional para
+                                Se genera el reporte con el cuadre, incluyendo
+                                resumen y formato condicional para
                                 identificación visual de diferencias.
                             </p>
                         </div>
@@ -472,12 +470,12 @@ import { Icon } from "astro-icon/components";
                                 class="w-5 h-5 text-green-400"
                             />
                             <h3 class="text-text-primary font-medium">
-                                Multi-formato
+                                Fácil de Usar
                             </h3>
                         </div>
                         <p class="text-text-muted text-sm">
-                            Procesa múltiples tipos de archivos de entrada de
-                            forma unificada.
+                            Cualquier colaborador puede ejecutar el proceso sin
+                            capacitación especializada en el cuadre.
                         </p>
                     </div>
 
@@ -512,8 +510,8 @@ import { Icon } from "astro-icon/components";
                             </h3>
                         </div>
                         <p class="text-text-muted text-sm">
-                            Formato condicional con códigos de colores para
-                            identificación rápida de diferencias.
+                            Formato condicional para identificación rápida de
+                            diferencias en el reporte.
                         </p>
                     </div>
 
@@ -530,52 +528,9 @@ import { Icon } from "astro-icon/components";
                             </h3>
                         </div>
                         <p class="text-text-muted text-sm">
-                            Sistema probado contra cuadres históricos para
-                            garantizar resultados correctos.
+                            Sistema verificado con datos reales para garantizar
+                            resultados correctos.
                         </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Resultados -->
-            <section class="mb-16">
-                <h2
-                    class="text-2xl font-bold text-text-primary mb-6 flex items-center gap-3"
-                >
-                    <span class="text-accent-cyan font-mono text-lg">//</span>
-                    Resultados
-                </h2>
-
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div
-                        class="p-5 bg-surface/50 border border-white/5 rounded-xl text-center"
-                    >
-                        <div class="text-3xl font-bold text-accent-cyan mb-1">
-                            99.7%
-                        </div>
-                        <div class="text-text-muted text-xs">
-                            Reducción de tiempo
-                        </div>
-                    </div>
-
-                    <div
-                        class="p-5 bg-surface/50 border border-white/5 rounded-xl text-center"
-                    >
-                        <div class="text-3xl font-bold text-accent-purple mb-1">
-                            0
-                        </div>
-                        <div class="text-text-muted text-xs">
-                            Errores humanos
-                        </div>
-                    </div>
-
-                    <div
-                        class="p-5 bg-surface/50 border border-white/5 rounded-xl text-center"
-                    >
-                        <div class="text-3xl font-bold text-accent-cyan mb-1">
-                            100%
-                        </div>
-                        <div class="text-text-muted text-xs">Automatizado</div>
                     </div>
                 </div>
             </section>
@@ -601,9 +556,9 @@ import { Icon } from "astro-icon/components";
                                 Procesamiento de Archivos
                             </h3>
                             <p class="text-text-secondary text-sm">
-                                Manejo eficiente de múltiples formatos de
-                                archivo y optimización para grandes volúmenes de
-                                datos.
+                                Manejo eficiente de diferentes fuentes de datos
+                                y optimización para grandes volúmenes de
+                                información.
                             </p>
                         </div>
                     </div>
@@ -633,11 +588,11 @@ import { Icon } from "astro-icon/components";
                         </div>
                         <div>
                             <h3 class="text-text-primary font-medium mb-1">
-                                Dominio Financiero
+                                Contexto de Negocio
                             </h3>
                             <p class="text-text-secondary text-sm">
-                                Comprensión profunda de procesos de conciliación
-                                bancaria y requisitos de auditoría.
+                                Comprensión de procesos de conciliación bancaria
+                                y requisitos de auditoría.
                             </p>
                         </div>
                     </div>
@@ -690,14 +645,46 @@ import { Icon } from "astro-icon/components";
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="py-8 px-6 border-t border-white/5">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-text-muted text-sm">
-                © 2025 Jesus. Hecho con
-                <span class="text-accent-purple">♥</span> y
-                <span class="text-accent-cyan">código</span>
-            </p>
+    <Footer />
+    <!-- Modal Imagen Pago Directo -->
+    <div
+        id="modal-pago-directo"
+        class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4"
+        onclick="if(event.target === this) this.classList.add('hidden')"
+    >
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+        <!-- Contenido del modal -->
+        <div
+            class="relative max-w-6xl w-full max-h-[90vh] flex flex-col items-center"
+        >
+            <!-- Botón cerrar -->
+            <button
+                onclick="document.getElementById('modal-pago-directo').classList.add('hidden')"
+                class="absolute -top-2 -right-2 z-10 w-10 h-10 bg-surface/80 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center text-text-muted hover:text-white hover:border-accent-purple/50 transition-all cursor-pointer"
+            >
+                <Icon name="tabler:x" class="w-5 h-5" />
+            </button>
+
+            <!-- Imagen -->
+            <Image
+                src={pagoDirectoFlow}
+                alt="Diagrama del flujo de Pago Directo"
+                class="max-w-full max-h-[85vh] object-contain rounded-xl border border-white/10"
+                loading="lazy"
+                quality={75}
+            />
         </div>
-    </footer>
+    </div>
+
+    <script>
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                document
+                    .getElementById("modal-pago-directo")
+                    ?.classList.add("hidden");
+            }
+        });
+    </script>
 </Layout>

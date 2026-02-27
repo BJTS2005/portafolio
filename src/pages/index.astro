@@ -5,6 +5,7 @@ import fotoPerfil from "../assets/images/foto_perfil.jpeg";
 import trainTheTrainers from "../assets/images/trainthetrainers.png";
 import awsAcademy from "../assets/images/awsacademy.png";
 import { Icon } from "astro-icon/components";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
@@ -1423,32 +1424,7 @@ import { Icon } from "astro-icon/components";
 		</div>
 	</section>
 
-	<!-- Footer -->
-	<footer class="py-8 px-6 border-t border-white/5">
-		<div
-			class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
-		>
-			<p class="text-text-muted text-sm">
-				© 2025 Jesus. Hecho con
-				<span class="text-accent-purple">♥</span> y
-				<span class="text-accent-cyan">código</span>
-			</p>
-			<p class="text-text-muted text-sm font-mono">
-				<span class="text-accent-cyan">&lt;</span>
-				Astro + Tailwind
-				<span class="text-accent-cyan">/&gt;</span>
-			</p>
-		</div>
-		<!--
-		Hey, veo que revisas el código fuente...
-		
-		Tranquilo, es una página estática. No hay backend, no hay base de datos, no hay nada que explotar.
-		
-		Pero si te gusta la seguridad, hablemos 🤝
-
-		-Jesus
-		-->
-	</footer>
+	<Footer />
 
 	<script>
 		// Mobile menu toggle

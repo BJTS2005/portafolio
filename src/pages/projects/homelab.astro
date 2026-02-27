@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import Footer from "../../components/Footer.astro";
 import homelabImg from "../../assets/images/homelab.png";
 ---
 
@@ -590,14 +591,5 @@ import homelabImg from "../../assets/images/homelab.png";
         </div>
     </main>
 
-    <!-- Footer simple -->
-    <footer class="py-8 px-6 border-t border-white/5">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-text-muted text-sm">
-                © 2025 Jesus. Hecho con
-                <span class="text-accent-purple">♥</span> y
-                <span class="text-accent-cyan">código</span>
-            </p>
-        </div>
-    </footer>
+    <Footer />
 </Layout>
