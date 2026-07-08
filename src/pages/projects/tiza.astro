@@ -86,34 +86,43 @@ import tizaCursos from "../../assets/images/tiza-cursos.png";
                 >
                     Sistema integral de gestión académica <span
                         class="text-green-400">en producción</span
-                    > en una institución educativa real: control de acceso basado en roles, notificaciones
-                    automáticas por WhatsApp a representantes, panel de convivencia y portal
-                    de gestión docente en una sola plataforma.
+                    > en una institución educativa real: control de acceso basado
+                    en roles, notificaciones automáticas por WhatsApp a representantes,
+                    panel de convivencia y portal de gestión docente en una sola plataforma.
                 </p>
             </header>
 
             <!-- Aviso de datos ficticios -->
-            <div class="mb-12 p-4 bg-amber-500/5 border border-amber-500/20 rounded-xl flex items-start gap-3">
-                <svg class="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            <div
+                class="mb-12 p-4 bg-amber-500/5 border border-amber-500/20 rounded-xl flex items-start gap-3"
+            >
+                <svg
+                    class="w-5 h-5 text-amber-400 shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
                 </svg>
                 <p class="text-amber-200/80 text-sm leading-relaxed">
-                    <span class="font-semibold text-amber-300">Nota:</span> Todos los nombres, datos y registros
-                    mostrados en las capturas y el video son completamente ficticios, utilizados
-                    únicamente con fines demostrativos.
+                    <span class="font-semibold text-amber-300">Nota:</span> Todos
+                    los nombres, datos y registros mostrados en las capturas y el
+                    video son completamente ficticios, utilizados únicamente con fines
+                    demostrativos.
                 </p>
             </div>
 
             <!-- ───────────────────────────────────────────────── -->
             <!-- WALKTHROUGH / DEMO DEL SISTEMA                     -->
-            <div class="relative mb-16 rounded-2xl overflow-hidden border border-white/10">
-                <video
-                    class="w-full"
-                    controls
-                    muted
-                    loop
-                    playsinline
-                >
+            <div
+                class="relative mb-16 rounded-2xl overflow-hidden border border-white/10"
+            >
+                <video class="w-full" controls muted loop playsinline>
                     <source src={tizaDemo} type="video/webm" />
                 </video>
             </div>
@@ -129,7 +138,9 @@ import tizaCursos from "../../assets/images/tiza-cursos.png";
                 </h2>
 
                 <div class="grid md:grid-cols-2 gap-4">
-                    <div class="group rounded-xl overflow-hidden border border-white/10 bg-surface/30 hover:border-accent-cyan/30 transition-colors">
+                    <div
+                        class="group rounded-xl overflow-hidden border border-white/10 bg-surface/30 hover:border-accent-cyan/30 transition-colors"
+                    >
                         <div class="overflow-hidden">
                             <Image
                                 src={tizaDashboard}
@@ -138,12 +149,19 @@ import tizaCursos from "../../assets/images/tiza-cursos.png";
                             />
                         </div>
                         <div class="p-4">
-                            <h3 class="text-text-primary text-sm font-medium">Panel de Administración</h3>
-                            <p class="text-text-muted text-xs mt-1">Dashboard con métricas en tiempo real, gráficos de matrícula y proporción de asistencia.</p>
+                            <h3 class="text-text-primary text-sm font-medium">
+                                Panel de Administración
+                            </h3>
+                            <p class="text-text-muted text-xs mt-1">
+                                Dashboard con métricas en tiempo real, gráficos
+                                de matrícula y proporción de asistencia.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="group rounded-xl overflow-hidden border border-white/10 bg-surface/30 hover:border-green-500/30 transition-colors">
+                    <div
+                        class="group rounded-xl overflow-hidden border border-white/10 bg-surface/30 hover:border-green-500/30 transition-colors"
+                    >
                         <div class="overflow-hidden">
                             <Image
                                 src={tizaAsistencia}
@@ -152,12 +170,19 @@ import tizaCursos from "../../assets/images/tiza-cursos.png";
                             />
                         </div>
                         <div class="p-4">
-                            <h3 class="text-text-primary text-sm font-medium">Asistencia + Notificación WhatsApp</h3>
-                            <p class="text-text-muted text-xs mt-1">Al registrar una falta, el representante recibe un mensaje automático al instante.</p>
+                            <h3 class="text-text-primary text-sm font-medium">
+                                Asistencia + Notificación WhatsApp
+                            </h3>
+                            <p class="text-text-muted text-xs mt-1">
+                                Al registrar una falta, el representante recibe
+                                un mensaje automático al instante.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="group rounded-xl overflow-hidden border border-white/10 bg-surface/30 hover:border-accent-violet/30 transition-colors">
+                    <div
+                        class="group rounded-xl overflow-hidden border border-white/10 bg-surface/30 hover:border-accent-violet/30 transition-colors"
+                    >
                         <div class="overflow-hidden">
                             <Image
                                 src={tizaConvivencia}
@@ -166,12 +191,19 @@ import tizaCursos from "../../assets/images/tiza-cursos.png";
                             />
                         </div>
                         <div class="p-4">
-                            <h3 class="text-text-primary text-sm font-medium">Panel de Convivencia (DECE)</h3>
-                            <p class="text-text-muted text-xs mt-1">Alertas de faltas consecutivas, ranking de inasistencias y reportes disciplinarios.</p>
+                            <h3 class="text-text-primary text-sm font-medium">
+                                Panel de Convivencia (DECE)
+                            </h3>
+                            <p class="text-text-muted text-xs mt-1">
+                                Alertas de faltas consecutivas, ranking de
+                                inasistencias y reportes disciplinarios.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="group rounded-xl overflow-hidden border border-white/10 bg-surface/30 hover:border-accent-cyan/30 transition-colors">
+                    <div
+                        class="group rounded-xl overflow-hidden border border-white/10 bg-surface/30 hover:border-accent-cyan/30 transition-colors"
+                    >
                         <div class="overflow-hidden">
                             <Image
                                 src={tizaCursos}
@@ -180,8 +212,13 @@ import tizaCursos from "../../assets/images/tiza-cursos.png";
                             />
                         </div>
                         <div class="p-4">
-                            <h3 class="text-text-primary text-sm font-medium">Cursos, Docentes y Horarios</h3>
-                            <p class="text-text-muted text-xs mt-1">Apertura de cursos por año lectivo, asignación de materias y gestión de horarios.</p>
+                            <h3 class="text-text-primary text-sm font-medium">
+                                Cursos, Docentes y Horarios
+                            </h3>
+                            <p class="text-text-muted text-xs mt-1">
+                                Apertura de cursos por año lectivo, asignación
+                                de materias y gestión de horarios.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -197,10 +234,7 @@ import tizaCursos from "../../assets/images/tiza-cursos.png";
                 </h2>
                 <div class="p-6 bg-surface/50 border border-white/5 rounded-xl">
                     <p class="text-text-secondary leading-relaxed">
-                        <!-- ⚠️ VERIFICA ESTE PÁRRAFO: los detalles del proceso
-                        previo (papel, hojas de cálculo, demoras) deben reflejar
-                        cómo lo hacía realmente la institución. Ajusta según el
-                        caso real. -->
+
                         El control de asistencia y el seguimiento disciplinario se
                         llevaban de forma manual, en papel, lo que dificultaba consolidar
                         la información y avisar a tiempo a los representantes. No
