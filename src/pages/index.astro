@@ -319,6 +319,102 @@ import Footer from "../components/Footer.astro";
 			</div>
 
 			<div class="grid md:grid-cols-2 gap-8">
+				<!-- Proyecto: Tiza — Gestión Escolar -->
+				<article
+					class="group relative bg-surface/50 border border-white/5 rounded-2xl overflow-hidden hover:border-accent-cyan/30 transition-all duration-500"
+				>
+					<!-- Glow effect on hover -->
+					<div
+						class="absolute inset-0 bg-gradient-to-br from-accent-cyan/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+					>
+					</div>
+
+					<div class="relative p-8">
+						<!-- Header -->
+						<div class="flex items-start justify-between mb-6">
+							<div class="p-3 bg-accent-cyan/10 rounded-xl">
+								<svg
+									class="w-8 h-8 text-accent-cyan"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.5"
+										d="M12 14l9-5-9-5-9 5 9 5z"></path>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.5"
+										d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+									></path>
+								</svg>
+							</div>
+							<span
+								class="px-3 py-1 bg-green-500/10 text-green-400 text-xs rounded-full border border-green-500/20"
+							>
+								Producción
+							</span>
+						</div>
+
+						<!-- Content -->
+						<h3
+							class="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent-cyan transition-colors"
+						>
+							Tiza — Gestión Escolar
+						</h3>
+						<p class="text-text-secondary text-sm leading-relaxed mb-6">
+							Sistema integral de gestión académica en producción en una unidad
+							educativa: control de acceso basado en roles, <span
+								class="text-accent-cyan font-semibold"
+								>notificaciones automáticas por WhatsApp</span
+							> a representantes, panel de convivencia y portal de gestión docente.
+						</p>
+
+						<!-- Tech stack -->
+						<div class="flex flex-wrap gap-2 mb-6">
+							<span
+								class="px-3 py-1 bg-primary text-text-muted text-xs rounded-full"
+								>React</span
+							>
+							<span
+								class="px-3 py-1 bg-primary text-text-muted text-xs rounded-full"
+								>Node.js</span
+							>
+							<span
+								class="px-3 py-1 bg-primary text-text-muted text-xs rounded-full"
+								>PostgreSQL</span
+							>
+							<span
+								class="px-3 py-1 bg-primary text-text-muted text-xs rounded-full"
+								>Docker</span
+							>
+						</div>
+
+						<!-- Link -->
+						<a
+							href="/projects/tiza/"
+							class="inline-flex items-center gap-2 text-accent-cyan text-sm group/link"
+						>
+							Ver detalles
+							<svg
+								class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+							</svg>
+						</a>
+					</div>
+				</article>
+
 				<!-- Proyecto 1: Conciliación Bancaria -->
 				<article
 					class="group relative bg-surface/50 border border-white/5 rounded-2xl overflow-hidden hover:border-accent-purple/30 transition-all duration-500"
